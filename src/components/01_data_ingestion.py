@@ -2,9 +2,10 @@ import os
 import sys
 import pandas as pd
 import logging
+import seaborn as sns
 from sklearn.model_selection import train_test_split
+from src.pipeline.custom_exception import CustomException
 
-from exception import CustomException  # Your custom exception module
 
 class DataIngestion:
     """
