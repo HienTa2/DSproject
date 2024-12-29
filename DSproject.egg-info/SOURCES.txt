@@ -11,7 +11,7 @@ src/components/02_data_transformation.py
 src/components/03_model_trainer.py
 src/components/__init__.py
 src/pipeline/__init__.py
-src/pipeline/exception.py
+src/pipeline/custom_exception.py
 src/pipeline/log_config.py
 src/pipeline/predict_pipeline.py
 src/pipeline/train_pipeline.py

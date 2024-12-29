@@ -6,5 +6,7 @@ Author-email: Hienta@PM.ME
 Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: seaborn
+Requires-Dist: matplotlib
 Requires-Dist: scikit-learn
-Requires-Dist: exception
+Requires-Dist: scikit-learn
+Requires-Dist: catboost
