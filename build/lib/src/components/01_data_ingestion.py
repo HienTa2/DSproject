@@ -4,7 +4,7 @@ import pandas as pd
 import logging
 import seaborn as sns
 from sklearn.model_selection import train_test_split
-from src.pipeline.custom_exception import CustomException
+from src_scripts.pipeline.custom_exception import CustomException
 
 
 class DataIngestion:
