@@ -13,9 +13,9 @@ from src_scripts.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
-    train_data_path: str = os.path.join('artifacts', "train.csv")
-    test_data_path: str = os.path.join('artifacts', "test.csv")
-    raw_data_path: str = os.path.join('artifacts', "data.csv")
+    train_data_path: str = os.path.join('artifacts', 'data', "train.csv")
+    test_data_path: str = os.path.join('artifacts', 'data', "test.csv")
+    raw_data_path: str = os.path.join('artifacts', 'data', "data.csv")
 
 
 class DataIngestion:
@@ -52,11 +52,14 @@ class DataIngestion:
 
 
 if __name__ == "__main__":
+    # Data Ingestion Step
     obj = DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
 
+    # Data Transformation Step
     data_transformation = DataTransformation()
     train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data)
 
-
-    print(ModelTrainer().initiate_model_trainer(train_arr, test_arr))
+    # Model Training Step
+    model_trainer = ModelTrainer()
+    print(model_trainer.initiate_model_trainer(train_arr, test_arr))
