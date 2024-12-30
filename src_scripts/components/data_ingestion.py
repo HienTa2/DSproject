@@ -3,13 +3,10 @@ import sys
 from src_scripts.exception import CustomException
 from src_scripts.logger import logging
 import pandas as pd
-
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-
 from src_scripts.components.data_transformation import DataTransformation
 from src_scripts.components.data_transformation import DataTransformationConfig
-
 from src_scripts.components.model_trainer import ModelTrainerConfig
 from src_scripts.components.model_trainer import ModelTrainer
 
