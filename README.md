@@ -1,5 +1,12 @@
 ## End to End Machine Learning
 
+# DSProject
+
+DSProject is a comprehensive pipeline for machine learning that automates the ingestion, transformation, and training of models on structured data. The project is designed with modularity and extensibility, allowing users to easily integrate additional models or preprocessing techniques.
+
+## Project Structure
+
+DSProject/ |-- artifacts/ | |-- models/ | | |-- model.pkl | |-- transformers/ | |-- preprocessor.pkl | |-- catboost_info/ | |-- data/ | |-- stud.csv |-- logs/ |-- notebook/ | |-- 1. EDA STUDENT PERFORMANCE.ipynb | |-- 2. MODEL TRAINING.ipynb |-- pipeline/ |-- src_scripts/ | |-- components/ | | |-- data_ingestion.py | | |-- data_transformation.py | | |-- model_trainer.py | |-- utils.py | |-- logger.py | |-- exception.py |-- requirements.txt |-- README.md
 
 
 ### Key Folders
@@ -60,5 +67,10 @@ Defines the models to train and their respective hyperparameters.
         }
     }
 }
+
+```
+## How to Run
+* Prerequisites
+    Python 3.8 or higher
 
 
