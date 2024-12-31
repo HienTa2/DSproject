@@ -77,6 +77,12 @@ Defines the models to train and their respective hyperparameters.
 
   ```
   pip install -r requirements.txt
-...
+
+### Steps
+* Place your dataset in the data/ folder as stud.csv.
+* Run the pipeline
+  ```
+  python src_scripts/components/pipeline.py
+
 
 
