@@ -84,5 +84,5 @@ Defines the models to train and their respective hyperparameters.
   ```
   python src_scripts/components/pipeline.py
 
-
+* Check the artifacts/ folder for the preprocessed objects and the trained model.
 
