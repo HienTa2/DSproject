@@ -1,0 +1,12 @@
+[ 2024-12-31 11:35:11,118 ] 26 root - INFO - Entered the data ingestion method or component
+[ 2024-12-31 11:35:11,123 ] 29 root - INFO - Read the dataset as dataframe
+[ 2024-12-31 11:35:11,138 ] 35 root - INFO - Train test split initiated
+[ 2024-12-31 11:35:11,144 ] 42 root - INFO - Ingestion of the data is completed
+[ 2024-12-31 11:35:11,147 ] 72 root - INFO - Train dataset shape: (800, 8)
+[ 2024-12-31 11:35:11,147 ] 73 root - INFO - Test dataset shape: (200, 8)
+[ 2024-12-31 11:35:11,147 ] 51 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2024-12-31 11:35:11,148 ] 52 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2024-12-31 11:35:11,149 ] 86 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-12-31 11:35:11,164 ] 100 root - INFO - Saving preprocessing object.
+[ 2024-12-31 11:35:11,165 ] 66 root - INFO - Split training and test input data
+[ 2024-12-31 11:35:11,165 ] 78 root - INFO - Evaluating models...

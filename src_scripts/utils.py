@@ -2,8 +2,6 @@ from xgboost import XGBRegressor
 import os
 import sys
 import numpy as np
-import pandas as pd
-import dill
 import pickle
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
@@ -28,12 +26,26 @@ def save_object(file_path, obj):
         raise CustomException(e, sys)
 
 def evaluate_models(X_train, y_train, X_test, y_test, models, param):
+    """
+    Evaluates multiple models using manual tuning for XGBRegressor and GridSearchCV for others.
+
+    Args:
+        X_train (array): Training features.
+        y_train (array): Training target.
+        X_test (array): Testing features.
+        y_test (array): Testing target.
+        models (dict): Dictionary of models to evaluate.
+        param (dict): Dictionary of hyperparameters for each model.
+
+    Returns:
+        dict: R² scores for each model after tuning.
+    """
     try:
         report = {}
 
         for model_name, model in models.items():
-            if model_name == "XGBRegressor":
-                # Manual tuning for XGBRegressor
+            if model_name == "CustomXGBRegressor":
+                # Manual tuning for CustomXGBRegressor
                 best_params = None
                 best_score = float("-inf")
 
@@ -49,19 +61,25 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
                             best_score = score
                             best_params = {"learning_rate": learning_rate, "n_estimators": n_estimators}
 
-                model.set_params(**best_params)  # Set best parameters
+                model.set_params(**best_params)  # Apply best parameters
                 report[model_name] = best_score
 
             else:
                 # Use GridSearchCV for other models
-                gs = GridSearchCV(model, param[model_name], cv=3)
-                gs.fit(X_train, y_train)
+                try:
+                    gs = GridSearchCV(model, param[model_name], cv=3, scoring='r2', n_jobs=-1)
+                    gs.fit(X_train, y_train)
 
-                model.set_params(**gs.best_params_)
-                model.fit(X_train, y_train)
+                    # Update model with best parameters
+                    model.set_params(**gs.best_params_)
+                    model.fit(X_train, y_train)
 
-                y_test_pred = model.predict(X_test)
-                report[model_name] = r2_score(y_test, y_test_pred)
+                    y_test_pred = model.predict(X_test)
+                    report[model_name] = r2_score(y_test, y_test_pred)
+                except Exception as grid_error:
+                    # Log error for individual models
+                    print(f"Error during GridSearchCV for {model_name}: {grid_error}")
+                    report[model_name] = None
 
         return report
 

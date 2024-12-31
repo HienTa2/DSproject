@@ -20,7 +20,9 @@ class DataTransformation:
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
 
-    def get_data_transformer_object(self):
+    @staticmethod
+    def get_data_transformer_object():
+        """Static method to create and return a preprocessing object."""
         try:
             numerical_columns = ["writing_score", "reading_score"]
             categorical_columns = [
@@ -62,6 +64,7 @@ class DataTransformation:
             raise CustomException(e, sys)
 
     def initiate_data_transformation(self, train_path, test_path):
+        """Function to preprocess and transform train and test data."""
         try:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
@@ -90,7 +93,9 @@ class DataTransformation:
             train_arr = np.c_[
                 input_feature_train_arr, np.array(target_feature_train_df)
             ]
-            test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
+            test_arr = np.c_[
+                input_feature_test_arr, np.array(target_feature_test_df)
+            ]
 
             logging.info(f"Saving preprocessing object.")
             save_object(
