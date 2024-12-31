@@ -74,8 +74,9 @@ Defines the models to train and their respective hyperparameters.
     Python 3.8 or higher
 
 * Install dependencies:
+
   ```
   pip install -r requirements.txt
-  ...
+...
 
 
