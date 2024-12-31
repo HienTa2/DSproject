@@ -11,7 +11,7 @@ DSProject/ |-- artifacts/ | |-- models/ | | |-- model.pkl | |-- transformers/ | 
 
 ### Key Folders
 
-- **artifacts/**: Stores the trained models and preprocessing objects.
+- **scr_scripts/components/artifacts/**: Stores the trained models and preprocessing objects.
 - **data/**: Contains raw and split datasets.
 - **notebook/**: Includes Jupyter notebooks for exploratory data analysis (EDA) and model training.
 - **src_scripts/**: Contains the core Python scripts for each step of the pipeline.
