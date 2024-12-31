@@ -62,30 +62,3 @@ Defines the models to train and their respective hyperparameters.
 }
 
 
-How to Run
-Prerequisites
-Python 3.8 or higher
-Install dependencies: pip install -r requirements.txt
-Steps
-Place your dataset in the data/ folder as stud.csv.
-Run the pipeline:
-bash
-Copy code
-python src_scripts/components/pipeline.py
-Check the artifacts/ folder for the preprocessed objects and the trained model.
-Customization
-Adding New Models
-Add the new model to model_mapping in model_trainer.py.
-Update config.json with the model name and its hyperparameters.
-Modifying Preprocessing
-Edit the get_data_transformer_object() method in data_transformation.py to customize feature engineering.
-
-Logging
-Logs are saved in the logs/ directory to track pipeline progress and debugging information.
-
-Contact
-For questions or contributions, feel free to contact the maintainer.
-
-Example Output
-Best Model: GradientBoostingRegressor
-R² Score: 0.85
