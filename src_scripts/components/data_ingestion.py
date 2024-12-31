@@ -1,5 +1,7 @@
 import os
 import sys
+
+from src_scripts.components.pipeline import main
 from src_scripts.exception import CustomException
 from src_scripts.logger import logging
 import pandas as pd
@@ -52,14 +54,5 @@ class DataIngestion:
 
 
 if __name__ == "__main__":
-    # Data Ingestion Step
-    obj = DataIngestion()
-    train_data, test_data = obj.initiate_data_ingestion()
+    main()
 
-    # Data Transformation Step
-    data_transformation = DataTransformation()
-    train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data)
-
-    # Model Training Step
-    model_trainer = ModelTrainer()
-    print(model_trainer.initiate_model_trainer(train_arr, test_arr))
