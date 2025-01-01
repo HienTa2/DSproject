@@ -1,0 +1,18 @@
+[ 2025-01-01 15:28:13,016 ] 9 root - INFO - Pipeline execution started.
+[ 2025-01-01 15:28:13,016 ] 22 root - INFO - Entered the data ingestion method or component
+[ 2025-01-01 15:28:13,024 ] 25 root - INFO - Read the dataset as dataframe
+[ 2025-01-01 15:28:13,033 ] 31 root - INFO - Train test split initiated
+[ 2025-01-01 15:28:13,042 ] 37 root - INFO - Ingestion of the data is completed
+[ 2025-01-01 15:28:13,042 ] 14 root - INFO - Data ingestion completed. Train path: artifacts\data\train.csv, Test path: artifacts\data\test.csv
+[ 2025-01-01 15:28:13,045 ] 72 root - INFO - Train dataset shape: (800, 8)
+[ 2025-01-01 15:28:13,046 ] 73 root - INFO - Test dataset shape: (200, 8)
+[ 2025-01-01 15:28:13,046 ] 51 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2025-01-01 15:28:13,046 ] 52 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2025-01-01 15:28:13,048 ] 86 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2025-01-01 15:28:13,068 ] 100 root - INFO - Saving preprocessing object.
+[ 2025-01-01 15:28:13,069 ] 21 root - INFO - Data transformation completed.
+[ 2025-01-01 15:28:13,069 ] 66 root - INFO - Split training and test input data
+[ 2025-01-01 15:28:45,091 ] 96 root - INFO - Best Model: LinearRegression
+[ 2025-01-01 15:28:45,091 ] 97 root - INFO - R² Score: 0.8804332983749565 (R² measures how well the model explains the variance in the data. A score closer to 1 means better performance.)
+[ 2025-01-01 15:28:45,095 ] 26 root - INFO - Model training completed.
+[ 2025-01-01 15:28:45,095 ] 28 root - INFO - Pipeline executed successfully. Report: {'Best Model': 'LinearRegression', 'R² Score': 0.8804332983749565, 'Explanation': 'R² measures how well the model explains the variance in the data. A score closer to 1 means better performance.'}

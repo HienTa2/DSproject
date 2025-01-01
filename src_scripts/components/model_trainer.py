@@ -24,7 +24,7 @@ class CustomXGBRegressor(XGBRegressor):
 
 @dataclass
 class ModelTrainerConfig:
-    base_artifacts_path: str = os.path.join("src_scripts", "components", "artifacts")
+    base_artifacts_path: str = os.path.join("artifacts")
     trained_model_file_path: str = os.path.join(base_artifacts_path, "models", "model.pkl")
 
 
@@ -42,7 +42,6 @@ class ModelTrainer:
         except json.JSONDecodeError:
             raise CustomException(f"Invalid JSON format in config file: {self.config_path}", sys)
 
-        # Explicit mapping for model initialization
         model_mapping = {
             "RandomForestRegressor": RandomForestRegressor,
             "DecisionTreeRegressor": DecisionTreeRegressor,
@@ -71,16 +70,13 @@ class ModelTrainer:
                 test_array[:, -1]
             )
 
-            # Retrieve models and parameters
             models, params = self.get_models_and_params()
 
-            # Evaluate models
-            model_report: dict = evaluate_models(
+            model_report = evaluate_models(
                 X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test,
                 models=models, param=params
             )
 
-            # Get the best model and its score
             valid_model_scores = {name: score for name, score in model_report.items() if score is not None}
 
             if not valid_model_scores:
@@ -94,10 +90,7 @@ class ModelTrainer:
                 raise CustomException("No suitable model found with R² > 0.6")
 
             logging.info(f"Best Model: {best_model_name}")
-            logging.info(
-                f"R² Score: {best_model_score} (R² measures how well the model explains the variance in the data. "
-                "A score closer to 1 means better performance.)"
-            )
+            logging.info(f"R² Score: {best_model_score}")
 
             # Validate and create directory for model saving
             model_dir = os.path.dirname(self.model_trainer_config.trained_model_file_path)
@@ -109,7 +102,6 @@ class ModelTrainer:
                 obj=best_model
             )
 
-            # Make predictions and compute final R² score
             predicted = best_model.predict(X_test)
             r2_square = r2_score(y_test, predicted)
 

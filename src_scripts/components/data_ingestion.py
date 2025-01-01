@@ -1,16 +1,10 @@
 import os
 import sys
-
-from src_scripts.components.pipeline import main
 from src_scripts.exception import CustomException
 from src_scripts.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-from src_scripts.components.data_transformation import DataTransformation
-from src_scripts.components.data_transformation import DataTransformationConfig
-from src_scripts.components.model_trainer import ModelTrainerConfig
-from src_scripts.components.model_trainer import ModelTrainer
 
 
 @dataclass
@@ -38,21 +32,18 @@ class DataIngestion:
             train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
 
             train_set.to_csv(self.ingestion_config.train_data_path, index=False, header=True)
-
             test_set.to_csv(self.ingestion_config.test_data_path, index=False, header=True)
 
             logging.info("Ingestion of the data is completed")
-
-
             return (
                 self.ingestion_config.train_data_path,
                 self.ingestion_config.test_data_path
-
             )
         except Exception as e:
             raise CustomException(e, sys)
 
 
+# Conditional import to avoid circular dependency
 if __name__ == "__main__":
+    from src_scripts.components.pipeline import main
     main()
-

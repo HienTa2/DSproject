@@ -44,3 +44,4 @@
    2.09830697]]
 [ 2025-01-01 14:57:36,275 ] 44 root - INFO - Predictions: [69.52859626]
 [ 2025-01-01 14:57:36,276 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:57:36] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 15:17:40,546 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\Admin\\PycharmProjects\\DSproject\\src_scripts\\pipeline\\train_pipeline.py', reloading
