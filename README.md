@@ -86,3 +86,6 @@ Defines the models to train and their respective hyperparameters.
 
 * Check the artifacts/ folder for the preprocessed objects and the trained model.
 
+  ![{4AC93885-E011-47EC-A201-48E0D8E7AF9F}](https://github.com/user-attachments/assets/958df874-d11e-425b-9ba5-657e11e89a5c)
+
+
