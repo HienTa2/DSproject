@@ -1,0 +1,19 @@
+[ 2025-01-01 14:42:48,935 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-01 14:42:48,940 ] 97 werkzeug - INFO -  * Debugger PIN: 338-897-657
+[ 2025-01-01 14:42:51,112 ] 39 root - INFO - Input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...         100.0          75.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:42:51,112 ] 32 root - ERROR - Error in prediction pipeline: Model or preprocessor not found!
+[ 2025-01-01 14:42:51,113 ] 48 root - ERROR - Unexpected error: Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\pipeline\predict_pipeline.py] line number [18] error message[Model or preprocessor not found!]
+[ 2025-01-01 14:42:51,121 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:42:51] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:43:04,147 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:43:04] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:43:23,696 ] 39 root - INFO - Input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          61.0          59.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:43:23,696 ] 32 root - ERROR - Error in prediction pipeline: Model or preprocessor not found!
+[ 2025-01-01 14:43:23,697 ] 48 root - ERROR - Unexpected error: Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\pipeline\predict_pipeline.py] line number [18] error message[Model or preprocessor not found!]
+[ 2025-01-01 14:43:23,698 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:43:23] "POST /predictdata HTTP/1.1" 200 -

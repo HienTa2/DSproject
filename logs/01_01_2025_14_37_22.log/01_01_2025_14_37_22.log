@@ -1,0 +1,18 @@
+[ 2025-01-01 14:37:23,270 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-01 14:37:23,277 ] 97 werkzeug - INFO -  * Debugger PIN: 338-897-657
+[ 2025-01-01 14:37:34,776 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:37:34] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:38:17,355 ] 23 root - INFO - POST request received
+[ 2025-01-01 14:38:17,370 ] 77 root - INFO - Generated input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...         100.0          75.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:38:17,379 ] 42 root - INFO - Input DataFrame:   gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...         100.0          75.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:38:17,382 ] 18 root - ERROR - Preprocessor path not found: artifacts/transformers/preprocessor.pkl
+[ 2025-01-01 14:38:17,382 ] 47 root - ERROR - Error during prediction: Preprocessor path not found: artifacts/transformers/preprocessor.pkl
+[ 2025-01-01 14:38:17,382 ] 50 root - ERROR - Prediction failed: Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\pipeline\predict_pipeline.py] line number [19] error message[Preprocessor path not found: artifacts/transformers/preprocessor.pkl]
+[ 2025-01-01 14:38:17,383 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:38:17] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:42:03,361 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\Admin\\PycharmProjects\\DSproject\\app.py', reloading

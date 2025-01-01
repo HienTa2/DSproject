@@ -21,9 +21,11 @@ class CustomXGBRegressor(XGBRegressor):
     def __sklearn_tags__(self):
         return {"estimator_type": "regressor"}
 
+
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join("artifacts", "models", "model.pkl")
+    base_artifacts_path: str = os.path.join("src_scripts", "components", "artifacts")
+    trained_model_file_path: str = os.path.join(base_artifacts_path, "models", "model.pkl")
 
 
 class ModelTrainer:
@@ -94,7 +96,12 @@ class ModelTrainer:
             logging.info(f"Best Model: {best_model_name}")
             logging.info(
                 f"R² Score: {best_model_score} (R² measures how well the model explains the variance in the data. "
-                "A score closer to 1 means better performance.)")
+                "A score closer to 1 means better performance.)"
+            )
+
+            # Validate and create directory for model saving
+            model_dir = os.path.dirname(self.model_trainer_config.trained_model_file_path)
+            os.makedirs(model_dir, exist_ok=True)
 
             # Save the best model
             save_object(
@@ -115,5 +122,3 @@ class ModelTrainer:
 
         except Exception as e:
             raise CustomException(e, sys)
-
-

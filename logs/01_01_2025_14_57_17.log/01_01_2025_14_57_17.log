@@ -1,0 +1,46 @@
+[ 2025-01-01 14:57:18,092 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-01 14:57:18,097 ] 97 werkzeug - INFO -  * Debugger PIN: 338-897-657
+[ 2025-01-01 14:57:22,095 ] 78 root - INFO - Generated input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          61.0          59.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:57:22,102 ] 39 root - INFO - Input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          61.0          59.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:57:22,359 ] 28 root - INFO - Successfully loaded preprocessor and model.
+[ 2025-01-01 14:57:22,366 ] 39 root - INFO - Input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          61.0          59.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:57:22,377 ] 41 root - INFO - Transformed data: [[-0.62724237 -0.59193951  0.          2.00276196  3.5621053   0.
+   0.          0.          0.          0.          3.07728727  0.
+   0.          0.          0.          2.10183809  0.          0.
+   2.09830697]]
+[ 2025-01-01 14:57:22,378 ] 44 root - INFO - Predictions: [61.84723229]
+[ 2025-01-01 14:57:22,383 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:57:22] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:57:36,251 ] 78 root - INFO - Generated input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          69.0          67.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:57:36,260 ] 39 root - INFO - Input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          69.0          67.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:57:36,261 ] 28 root - INFO - Successfully loaded preprocessor and model.
+[ 2025-01-01 14:57:36,268 ] 39 root - INFO - Input DataFrame:
+  gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          69.0          67.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:57:36,275 ] 41 root - INFO - Transformed data: [[-0.0965945  -0.03840169  0.          2.00276196  3.5621053   0.
+   0.          0.          0.          0.          3.07728727  0.
+   0.          0.          0.          2.10183809  0.          0.
+   2.09830697]]
+[ 2025-01-01 14:57:36,275 ] 44 root - INFO - Predictions: [69.52859626]
+[ 2025-01-01 14:57:36,276 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:57:36] "POST /predictdata HTTP/1.1" 200 -

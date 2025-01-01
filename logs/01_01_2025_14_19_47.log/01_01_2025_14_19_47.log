@@ -1,0 +1,9 @@
+[ 2025-01-01 14:19:48,594 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-01 14:19:48,599 ] 97 werkzeug - INFO -  * Debugger PIN: 338-897-657
+[ 2025-01-01 14:19:55,491 ] 52 root - ERROR - Invalid input: CustomData.__init__() got an unexpected keyword argument 'gender'
+[ 2025-01-01 14:19:55,502 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:19:55] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:20:16,071 ] 52 root - ERROR - Invalid input: CustomData.__init__() got an unexpected keyword argument 'gender'
+[ 2025-01-01 14:20:16,072 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:20:16] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:20:48,360 ] 52 root - ERROR - Invalid input: CustomData.__init__() got an unexpected keyword argument 'gender'
+[ 2025-01-01 14:20:48,361 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:20:48] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:23:59,727 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\Admin\\PycharmProjects\\DSproject\\src_scripts\\pipeline\\predict_pipeline.py', reloading

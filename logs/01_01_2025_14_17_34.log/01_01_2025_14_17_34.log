@@ -1,0 +1,6 @@
+[ 2025-01-01 14:17:36,094 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-01 14:17:36,101 ] 97 werkzeug - INFO -  * Debugger PIN: 338-897-657
+[ 2025-01-01 14:17:42,535 ] 52 root - ERROR - Invalid input: CustomData.__init__() got an unexpected keyword argument 'gender'
+[ 2025-01-01 14:17:42,548 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:17:42] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:18:06,248 ] 52 root - ERROR - Invalid input: CustomData.__init__() got an unexpected keyword argument 'gender'
+[ 2025-01-01 14:18:06,249 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:18:06] "POST /predictdata HTTP/1.1" 200 -

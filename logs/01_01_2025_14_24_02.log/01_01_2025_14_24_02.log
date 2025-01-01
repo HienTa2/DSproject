@@ -1,0 +1,14 @@
+[ 2025-01-01 14:24:03,524 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-01 14:24:03,529 ] 97 werkzeug - INFO -  * Debugger PIN: 338-897-657
+[ 2025-01-01 14:24:04,357 ] 38 root - INFO - Input DataFrame:   gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          60.0          44.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:24:04,357 ] 46 root - ERROR - Prediction failed: Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\pipeline\predict_pipeline.py] line number [15] error message[Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\utils.py] line number [92] error message[[Errno 2] No such file or directory: 'artifacts/transformers/preprocessor.pkl']]
+[ 2025-01-01 14:24:04,364 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:24:04] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-01 14:24:19,514 ] 38 root - INFO - Input DataFrame:   gender race_ethnicity  ... reading_score writing_score
+0   male        group A  ...          87.0          67.0
+
+[1 rows x 7 columns]
+[ 2025-01-01 14:24:19,514 ] 46 root - ERROR - Prediction failed: Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\pipeline\predict_pipeline.py] line number [15] error message[Error occured in python script name [C:\Users\Admin\PycharmProjects\DSproject\src_scripts\utils.py] line number [92] error message[[Errno 2] No such file or directory: 'artifacts/transformers/preprocessor.pkl']]
+[ 2025-01-01 14:24:19,515 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:24:19] "POST /predictdata HTTP/1.1" 200 -

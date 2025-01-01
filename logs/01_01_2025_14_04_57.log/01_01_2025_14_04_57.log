@@ -1,0 +1,5 @@
+[ 2025-01-01 14:04:59,004 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2025-01-01 14:04:59,004 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-01-01 14:06:36,030 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:06:36] "GET / HTTP/1.1" 200 -
+[ 2025-01-01 14:06:36,173 ] 97 werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 14:06:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
