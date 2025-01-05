@@ -1,0 +1,14 @@
+[ 2025-01-05 14:42:39,473 ] 22 root - INFO - Entered the data ingestion method or component
+[ 2025-01-05 14:42:39,477 ] 25 root - INFO - Read the dataset as dataframe
+[ 2025-01-05 14:42:39,482 ] 31 root - INFO - Train test split initiated
+[ 2025-01-05 14:42:39,488 ] 37 root - INFO - Ingestion of the data is completed
+[ 2025-01-05 14:42:39,491 ] 72 root - INFO - Train dataset shape: (800, 8)
+[ 2025-01-05 14:42:39,491 ] 73 root - INFO - Test dataset shape: (200, 8)
+[ 2025-01-05 14:42:39,491 ] 51 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2025-01-05 14:42:39,501 ] 52 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2025-01-05 14:42:39,502 ] 86 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2025-01-05 14:42:39,519 ] 100 root - INFO - Saving preprocessing object.
+[ 2025-01-05 14:42:39,521 ] 71 root - INFO - Splitting training and test input data
+[ 2025-01-05 14:42:39,521 ] 38 root - INFO - Loading configuration from: C:\Users\Admin\PycharmProjects\DSproject\src_scripts\components\config.json
+[ 2025-01-05 14:43:09,286 ] 102 root - INFO - Best Model: LinearRegression
+[ 2025-01-05 14:43:09,286 ] 103 root - INFO - R² Score: 0.8804332983749565
